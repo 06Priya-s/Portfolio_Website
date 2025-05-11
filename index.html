@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles.css">
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Complete Responsive Portfolio Website</title>
+    </head>
+    <body>
+
+         <!-- HEADER -->
+         <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Portfolio</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#home" class="nav__link ">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#education" class="nav__link">Education</a></li>
+                        <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
+                        <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+                        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
+
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== HOME =====-->
+            <section class="home bd-grid" id="home">
+                <div class="home__data">
+                    <h1 class="home__title"> <br>Hello!,<br>I'am <br> 
+                        <span class="home__title-color">Priyanka Sahoo <br></span>
+                        <span id="typing-animation"></span>
+
+						<span id="typing-animation"></span>
+
+<script>
+  const typingAnimationElement = document.getElementById('typing-animation');
+
+  const typingTexts = [
+    'A Student',
+    'A Java Developer',
+    'A Python Developer',
+    'A Front-end Developer'
+  ];
+
+  let currentTextIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeLoop() {
+    const currentText = typingTexts[currentTextIndex];
+
+    if (!isDeleting) {
+      typingAnimationElement.textContent = currentText.slice(0, charIndex + 1);
+      charIndex++;
+
+      if (charIndex === currentText.length) {
+        isDeleting = true;
+        setTimeout(typeLoop, 1000); // Wait before deleting
+      } else {
+        setTimeout(typeLoop, 150); // Typing speed
+      }
+    } else {
+      typingAnimationElement.textContent = currentText.slice(0, charIndex - 1);
+      charIndex--;
+
+      if (charIndex === 0) {
+        isDeleting = false;
+        currentTextIndex = (currentTextIndex + 1) % typingTexts.length;
+        setTimeout(typeLoop, 300); // Delay before typing next
+      } else {
+        setTimeout(typeLoop, 100); // Deleting speed
+      }
+    }
+  }
+
+  // Start the animation loop
+  typeLoop();
+
+
+  
+  const links = document.querySelectorAll('.nav__link');
+  const currentPage = window.location.pathname.split('/').pop();
+
+  links.forEach(link => {
+    if (link.getAttribute('href') === currentPage) {
+      link.classList.add('active');
+    }
+  });
+</script>
+
+</h1>
+                    <a href="https://github.com/06Priya-s" class="button">GitHub Profile</a>
+                </div>
+
+                <div class="home__img">   
+                    <img src="images/1.jpg" alt="">
+                </div>
+            </section>
+
+            <!--===== ABOUT =====-->
+            <section class="about section " id="about">
+                <h2 class="section-title">About</h2>
+
+                <div class="about__container bd-grid">
+                    <div class="about__img" >
+                        <img src="images/2.jpg" alt="">
+                    </div>
+                    
+                    <div>
+                        <p class="about__text">Dedicated and proactive Second-year Information Technology Management student, with strong proficiency in Java, C++, and C programming, complemented by foundational knowledge in Python and SQL. Proven expertise in C++ and GIT through internships. 
+                        <br>
+                        <!-- <br>
+                        As a web developer, I specialize in designing and developing dynamic, user-centric websites that not only look visually stunning but also provide seamless functionality. From eye-catching landing pages to complex web applications, I take pride in every project I undertake. I am well-versed in various frontend and backend technologies, including HTML5, CSS3, JavaScript (ES6+), React, Node.js, and SQL databases, to name a few. -->
+                        </p>   
+                        <ul class="about__list">
+                        <li>Education: Bachelor of Information Technology &amp; Management</li>
+                        <li>Language: English, Hindi, Odia</li>
+                        <li>Tools: Visual Studio Code,Dev C++, Eclipse &amp; Jupyter Ananconda</li>
+                        <li>Other Skills: Prompt Enginnering, Selenium,C++,PYTON,SQL, Git, JAVA &amp; Word</li>
+                        <li>Interest:Traveling, Scenery Photography, Handicrafts</li>
+                      </ul>        
+                    </div>                                   
+                </div>
+            </section>
+
+            <!--===== EDUCATION =====-->
+            <section class="service section" id="education">
+                <h2 class="section-title">Education</h2>
+
+                <div class="ag-format-container">
+               <div class="ag-courses_box">
+    <div class="ag-courses_item">
+      <a href="#" class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+          New Stewart School |  2008 - 2021
+        </div>
+
+        <div class="ag-courses-item_date-box">
+          <span class="ag-courses-item_date">
+            <p>ICSE | Cuttack, Odisha, India | Percentage: 94.67%</p>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a href="#" class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+        <div class="ag-courses-item_title">
+           St. Xavier's High School | 2021 - 2023 
+        </div>
+
+        <div class="ag-courses-item_date-box">
+          <span class="ag-courses-item_date">
+            <p>CBSE | Cuttack, Odisha, India | Percentage: 84.56%</p>
+          </span>
+        </div>
+      </a>
+    </div>
+
+    <div class="ag-courses_item">
+      <a href="#" class="ag-courses-item_link">
+        <div class="ag-courses-item_bg"></div>
+
+       <div class="ag-courses-item_title">
+        Ravenshaw University | 2023 - 2026 
+        </div>
+
+        <div class="ag-courses-item_date-box">
+          <span class="ag-courses-item_date">
+            <p>Cuttack, Odisha, India  |  CGPA: 9.61</p>
+          </span>
+        </div>
+      </a>
+    </div>
+    </div>
+      </section>
+
+      <!--===== EXPERIENCE =====-->
+<section class="experience section" id="experience">
+    <h2 class="section-title">Experience</h2>
+  
+    <div class="bd-grid experience__container">
+      <div class="experience__item">
+        <h3 class="experience__role">C++ Programming Intern</h3>
+        <span class="experience__company">CypherBytes Technologies | Jan 2025 – Feb 2025</span>
+        <ul class="experience__desc">
+                <li>Project Development: Developed Tic-Tac-Toe and Digital Calculator in C++, focusing on functionality, optimization, and user experience.</li>
+                <li>Problem-Solving: Resolved input validation issues, logic errors, and performance bottlenecks through debugging, algorithm refinement, and mentor feedback.</li>
+                <li>Skill Enhancement: Gained hands-on experience in C++ development, Git/GitHub for version control, and collaborative teamwork in a real-world tech environment.</li>
+            </ul>
+        </p>
+      </div>
+  
+      <div class="experience__item">
+        <h3 class="experience__role">Part-time Instructor</h3>
+        <span class="experience__company">Pulsar Computer | APRIL 2023- PRESENT</span>
+        <ul class="experience__desc">
+            <li>Instruct ICSE students (Grades IX, X, and XI) in both theoretical and practical aspects of Java and Python programming.</li>
+            <li>Conduct hands-on sessions focusing on calculations and pattern printing to improve student proficiency.</li>
+            <li>Enhance students' understanding by simplifying complex topics and using adaptive teaching strategies tailored to individual learning styles.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 2rem;">
+        <a href="Resume 2.pdf" class="button" download>Download Resume</a>
+      </div>
+  </section>
+  
+    
+            <!--===== PROJECTS =====-->
+<section class="work section" id="projects">
+    <h2 class="section-title">Projects</h2>
+  
+    <div class="work__container bd-grid">
+      <div class="work__img">
+        <a href="https://github.com/06Priya-s/CBT-CIP/blob/main/tic_tac_toe_soc.cpp" target="_blank">
+          <img src="images/tic.avif" alt="Project 1">
+        </a>
+        <p class="work__desc">A two-player console game with an intuitive interface and winner-detection logic..</p>
+      </div>
+  
+      <div class="work__img">
+        <a href="https://github.com/06Priya-s/CBT-CIP/blob/main/digital_calculator.cpp" target="_blank">
+          <img src="images/calc.webp" alt="Project 2">
+        </a>
+        <p class="work__desc">A console-based calculator that performs basic arithmetic and advanced mathematical operations using C++.</p>
+      </div>
+  
+      <div class="work__img">
+        <a href="https://github.com/06Priya-s/Slot-machine/blob/main/slot_machine.py"" target="_blank">
+          <img src="images/slot.png" alt="Project 3">
+        </a>
+        <p class="work__desc">A betting-based console game that simulates a slot machine with randomized outcomes.</p>
+      </div>
+      
+      <div class="work__img">
+        <a href="https://06priya-s.github.io/Film_website/" target="_blank">
+          <img src="images/film.jpg" alt="Project 4">
+        </a>
+        <p class="work__desc">A responsive film-sorting website with multiple pages, interactive hover effects, and dynamic layouts for mobile, tablet, and large screens. </p>
+      </div>
+
+      <div class="work__img">
+        <a href="https://06priya-s.github.io/portfolio/" target="_blank">
+          <img src="images/Portfolio-img.jpg" alt="Project 5">
+        </a>
+        <p class="work__desc">A responsive web portfolio showcases skills and projects while adapting seamlessly to different devices for an optimal user experience.</p>
+      </div>
+
+       <div class="work__img">
+        <a href="https://github.com/06Priya-s/Random_no_generator/blob/main/random_no_generator.py" target="_blank">
+          <img src="images/dice.jpeg" alt="Project 5">
+        </a>
+        <p class="work__desc">Interactive Python Number Guessing Game that adds a Graphical User Interface (GUI) to the classic number guessing game using the 
+					Tkinter module in Python.</p>
+      </div>
+      <!-- Add more projects below as needed -->
+    </div>
+  </section>
+  
+
+            <!--===== CONTACT =====-->
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+                 
+
+      <div class="contact__container bd-grid">
+        <form action="" class="contact__form">
+          <input type="text" placeholder="Name" class="contact__input">
+          <input type="mail" placeholder="Email" class="contact__input">
+          <textarea name="" placeholder="Message" id="" cols="0" rows="10" class="contact__input"></textarea>
+          <input type="button" value="Send" class="contact__button button">
+        </form>
+       </div>
+
+      <div class="contact__icons">
+        <div class="contact__icon-box">
+          <i class='bx bxs-phone'></i>
+          <p>+91 90782 20028</p>
+        </div>
+        <div class="contact__icon-box">
+          <i class='bx bxs-envelope'></i>
+          <p>i.siya5023@gmail.com</p>
+        </div>
+        <div class="contact__icon-box">
+          <i class='bx bx-directions'></i>
+          <p>Cuttack , Odisha </p>
+        </div>
+        <div class="contact__icon-box">
+          <i class='bx bxs-paper-plane'></i>
+          <p><a href="Resume 2.pdf" target="_blank">Resume</a></p>
+        </div>
+      </div>
+
+
+
+  </section>
+</main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title">Connect</p>
+            <div class="footer__social">
+                    <a href="https://www.linkedin.com/in/05priyankasahoo/" class="contact__icon-box"><i class='bx bxl-linkedin-square'></i></a>
+                    <!-- <a href="i.siya5023@gmail.com" class="footer_icon""><i class='bx bxs-paper-plane' ></i></a> -->
+                    <a href="https://github.com/06Priya-s" class="contact__icon-box"><i class='bx bxl-github' ></i></a>
+                    <!-- <a href="Resume 2.pdf" class="footer_icon""><i class='bx bxs-file' ></i></a> -->
+                </div>
+            <p>&#169; 2025 copyright all right reserved</p>
+        </footer>
+    </body>
+</html>
