@@ -646,6 +646,12 @@ margin-top: 80px;
 
 
 /* ===== MEDIA QUERIES=====*/
+
+@media only screen and (max-width: 400px) {
+  .home__img{
+    display:none;
+  }
+}
 @media screen and (min-width: 768px){
   body{
     margin: 0;
